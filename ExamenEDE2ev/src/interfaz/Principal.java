@@ -14,6 +14,7 @@ import java.awt.Color;
 import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 
+@Autor
 @SuppressWarnings("serial")
 public class Principal extends JFrame {
 	private JPanel contentPane;
@@ -38,7 +39,7 @@ public class Principal extends JFrame {
 	 * Create the frame.
 	 */
 	public Principal() {
-		setTitle("Practica NEODATIS");
+		setTitle("Documentacion ExamenEDE 2ev");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

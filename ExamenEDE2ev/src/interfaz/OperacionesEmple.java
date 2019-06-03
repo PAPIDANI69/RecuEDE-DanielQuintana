@@ -22,7 +22,7 @@ import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
 @SuppressWarnings("serial")
-public class OperacionesEmple extends JDialog {
+public class OperacionesEmple extends JDialog implements ActionListener {
 	private static final String BBDD="Empleados.dat";
 	private JPanel contentPane;
 	private JTextField txNumEmple;
@@ -32,6 +32,10 @@ public class OperacionesEmple extends JDialog {
 	private JTextField txSalario;
 	private JTextField txNumDepart;
 	private JLabel lblResultado;
+	private JButton btnConsultar;
+	private JButton btnInsertar;
+	private JButton btnBorrar;
+	private JButton btnModificar;
 
 	public OperacionesEmple() {
 		setTitle("Operaciones con Empleados");
@@ -102,10 +106,11 @@ public class OperacionesEmple extends JDialog {
 		contentPane.add(txNumDepart);
 		txNumDepart.setColumns(10);
 		
-		JButton btnConsultar = new JButton("Consultar");
+		btnConsultar = new JButton("Consultar");
 		btnConsultar.setFont(new Font("Dialog", Font.BOLD, 10));
 		btnConsultar.setBounds(293, 70, 89, 23);
 		contentPane.add(btnConsultar);
+		btnConsultar.addActionListener(this);
 		
 		lblResultado = new JLabel("---------------------------------------------------------------------");
 		lblResultado.setFont(new Font("Dialog", Font.BOLD, 14));
@@ -113,20 +118,23 @@ public class OperacionesEmple extends JDialog {
 		lblResultado.setBounds(37, 230, 345, 14);
 		contentPane.add(lblResultado);
 		
-		JButton btnInsertar = new JButton("Insertar Empleado");
+		btnInsertar = new JButton("Insertar Empleado");
 		btnInsertar.setFont(new Font("Dialog", Font.BOLD, 10));
 		btnInsertar.setBounds(21, 274, 130, 26);
 		contentPane.add(btnInsertar);
+		btnInsertar.addActionListener(this);
 		
-		JButton btnBorrar = new JButton("Borrar Empleado");
+		btnBorrar = new JButton("Borrar Empleado");
 		btnBorrar.setFont(new Font("Dialog", Font.BOLD, 10));
 		btnBorrar.setBounds(163, 274, 124, 26);
 		contentPane.add(btnBorrar);
+		btnBorrar.addActionListener(this);
 		
-		JButton btnModificar = new JButton("Modifcar Empleado");
+		btnModificar = new JButton("Modifcar Empleado");
 		btnModificar.setFont(new Font("Dialog", Font.BOLD, 10));
 		btnModificar.setBounds(302, 274, 129, 26);
 		contentPane.add(btnModificar);
+		btnModificar.addActionListener(this);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 182, 193));
@@ -326,5 +334,11 @@ public class OperacionesEmple extends JDialog {
 				}
 			}
 		});
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }

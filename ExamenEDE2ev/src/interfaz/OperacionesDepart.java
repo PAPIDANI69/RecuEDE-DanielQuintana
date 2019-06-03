@@ -33,7 +33,9 @@ public class OperacionesDepart extends JDialog {
 	private JTextField txNombre;
 	private JTextField txPoblacion;
 	private JLabel lblRespuesta;
-
+	
+	
+	
 	public OperacionesDepart() {
 		setTitle("Operaciones departamentos.");
 		setModal(true);
